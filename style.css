@@ -1,0 +1,548 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
+  z-index: 1;
+}
+
+.navbar {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: ltr;
+  z-index: 10;
+}
+
+.logo {
+  order: 1;
+}
+
+.logo img {
+  height: 72px;
+  width: auto;
+  display: block;
+}
+
+.hero-nav {
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.hero-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-nav a {
+  color: #ff8a1d;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: 0.3s ease;
+}
+
+.hero-nav a:hover {
+  color: #ffffff;
+}
+
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.hero-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-menu a {
+  color: #ff8a1d;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.hero-menu a:hover {
+  color: #fff;
+}
+
+.hero-nav-space {
+  width: 80px;
+  height: 80px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 140px 20px 60px;
+}
+
+.hero-content h1 {
+  color: #ff8a1d;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  max-width: 760px;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #ff8a1d;
+  color: #fff;
+  padding: 15px 34px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #e67610;
+  transform: translateY(-2px);
+}
+
+
+section {
+  padding: 90px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: #ff8a1d;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.section-title.dark h2 {
+  color: #111;
+}
+
+.services {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+    url("images/4.jpg.jpg") center/cover no-repeat;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 420px));
+  justify-content: center;
+  gap: 22px;
+}
+
+.service-card {
+  background: rgba(35, 35, 35, 0.88);
+  border: 1px solid rgba(255, 138, 29, 0.45);
+  border-radius: 18px;
+  padding: 22px 24px;
+  min-height: 220px;
+  transition: 0.35s ease;
+}
+
+.service-card:hover {
+  background: #ff8a1d;
+  border-color: #ff8a1d;
+  transform: translateY(-4px);
+}
+
+.service-card h3 {
+  color: #ff8a1d;
+  margin-bottom: 10px;
+  transition: 0.35s ease;
+}
+
+.service-card p {
+  color: #e8e8e8;
+  margin-bottom: 14px;
+  transition: 0.35s ease;
+}
+
+.service-card a {
+  color: #ff8a1d;
+  font-weight: bold;
+  transition: 0.35s ease;
+}
+
+.service-card:hover h3,
+.service-card:hover a {
+  color: #2b2b2b;
+}
+
+.service-card:hover p {
+  color: #1f1f1f;
+}
+
+.coaches {
+  background: #f7f7f7;
+  color: #111;
+}
+
+.coach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.coach-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  min-height: 520px;
+}
+
+.coach-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.coach-card h3 {
+  color: #ff8a1d;
+  margin: 20px 0 12px;
+  font-size: 1.25rem;
+}
+
+.coach-card p {
+  padding: 0 22px;
+  color: #555;
+  font-size: 1rem;
+}
+.coach-card:nth-child(1) img {
+  object-position: center 20%;
+}
+
+.coach-card:nth-child(2) img {
+  object-position: center 28%;
+}
+
+.coach-card:nth-child(3) img {
+  object-position: center 35%;
+}
+
+.testimonials {
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url("images/3.jpg") center/cover no-repeat;
+}
+
+
+.testimonial-box {
+  max-width: 850px;
+  margin: auto;
+  border: 1px solid rgba(255, 138, 29, 0.4);
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.testimonial-box p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-box h4 {
+  color: #ff8a1d;
+}
+
+.brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.brand-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-logo.head {
+  height: 52px;
+}
+
+.partners {
+  background: #fff;
+  color: #111;
+}
+
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.partner-logos div {
+  background: #f3f3f3;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.newsletter {
+  background: #ff8a1d;
+  padding: 85px 8%;
+}
+
+.newsletter-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.newsletter-text {
+  flex: 1;
+}
+
+.newsletter-text h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  color: #fff;
+  font-weight: 800;
+  text-align: right;
+}
+
+.newsletter-form {
+  flex: 0 0 520px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
+}
+
+.newsletter-form input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #111;
+}
+
+.newsletter-form input::placeholder {
+  color: #888;
+}
+
+.newsletter-form button {
+  border: none;
+  background: #111;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .newsletter-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    flex: unset;
+  }
+}
+
+
+
+
+.footer {
+  background: #050505;
+  color: #ddd;
+  padding: 70px 8% 30px;
+}
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+}
+
+.footer h3,
+.footer h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer a {
+  display: block;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  color: #ff8a1d;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  margin-top: 35px;
+  padding-top: 20px;
+  text-align: center;
+  color: #888;
+}
+
+@media (max-width: 992px) {
+  .hero-nav {
+    grid-template-columns: 100px 1fr 100px;
+    padding: 22px 28px;
+  }
+
+  .hero-menu {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .services-grid,
+  .coach-grid,
+  .partner-logos,
+  .footer-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-nav {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .hero-logo-wrap {
+    justify-content: center;
+  }
+
+  .hero-nav-space {
+    display: none;
+  }
+
+  .hero-menu {
+    gap: 14px 18px;
+    flex-wrap: wrap;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .services-grid,
+  .coach-grid,
+  .partner-logos,
+  .footer-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-form input {
+    min-width: 100%;
+  }
+}
